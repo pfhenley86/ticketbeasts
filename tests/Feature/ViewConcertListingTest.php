@@ -26,7 +26,7 @@ class ViewConcertListingTest extends TestCase
             'city' => 'Laraville',
             'state' => 'ON',
             'zip' => '17916',
-            'additional_information' => 'For tickets, call (555) 555-5555',
+            'additional_information' => 'For tickets, call (555) 555-5555.',
 
         ]);
 
@@ -42,6 +42,15 @@ class ViewConcertListingTest extends TestCase
          * **/
 
         // See the concert details
+        $this->see('The Red Chord');
+        $this->see('with Animosty and Lethargy');
+        $this->see('December 13,2016');
+        $this->see('8:00pm');
+        $this->see('32.50');
+        $this->see('The Mosh Pit');
+        $this->see('123 Example Lane');
+        $this->see('Laraville,ON 17916');
+        $this->see('For tickets, call (555) 555-555.');
      
    }
 }
